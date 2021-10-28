@@ -40,6 +40,38 @@ export class HomeComponent implements OnInit {
       productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
       productImage: "../assets/images/pencil.png",
       price: 2.99,
+      reviewID: []},
+
+      {productId: 5, 
+      productName: "Faber-Castell Jumbo Grip Silber",
+      productStock: 3, 
+      productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
+      productImage: "../assets/images/pencil.png",
+      price: 2.99,
+      reviewID: []},
+      
+      {productId: 6, 
+      productName: "Faber-Castell Jumbo Grip Gold",
+      productStock: 3, 
+      productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
+      productImage: "../assets/images/pencil.png",
+      price: 2.99,
+      reviewID: []},
+
+      {productId: 7, 
+      productName: "Faber-Castell Jumbo Grip Blue",
+      productStock: 3, 
+      productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
+      productImage: "../assets/images/pencil.png",
+      price: 2.99,
+      reviewID: []},
+
+      {productId: 8, 
+      productName: "Faber-Castell Jumbo Grip Blue",
+      productStock: 3, 
+      productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
+      productImage: "../assets/images/pencil.png",
+      price: 2.99,
       reviewID: []}
 ]
 

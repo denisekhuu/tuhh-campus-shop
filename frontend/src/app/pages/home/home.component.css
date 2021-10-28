@@ -1,5 +1,7 @@
 .catalog{
+    max-width: 95vw;
     display: block;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
