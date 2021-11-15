@@ -5,5 +5,5 @@ class ProductQuerySet(models.QuerySet):
         return self.filter(pk=product_ID).first().product_Description
         
     def Get_Product_Picture_Path(self, product_ID):
-        return self.filter(pk=product_ID).first().picture_Path
+        return self.filter(pk=product_ID).first().picture_Path 
 ####
