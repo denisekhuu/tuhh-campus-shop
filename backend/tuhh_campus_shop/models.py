@@ -16,6 +16,10 @@ class ProductQuerySet(models.QuerySet):
         return self.filter(product_id=productID).first().picture_path 
 #####
 
+##### Lea
+   
+   
+#####
 
 # don't forget    
 
