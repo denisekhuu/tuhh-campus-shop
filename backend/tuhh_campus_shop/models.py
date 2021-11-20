@@ -53,7 +53,7 @@ from django.db import models
 
 
 class Product(models.Model):
-    product_id = models.AutoField(db_column='product_ID', unique=True)  # Field name made lowercase.                            #auto-generated = True? LEA
+    product_id = models.AutoField(db_column='product_ID', unique=True)  # Field name made lowercase.
     product_stock = models.PositiveIntegerField(db_column='product_Stock', blank=True, null=True)  # Field name made lowercase.
     product_name = models.TextField(db_column='product_Name', blank=True, null=True)  # Field name made lowercase.
     product_description = models.TextField(db_column='product_Description', blank=True, null=True)  # Field name made lowercase.
