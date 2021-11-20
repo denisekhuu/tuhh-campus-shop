@@ -34,7 +34,7 @@ class ProductQuerySet(models.QuerySet):
 
 
 class Product(models.Model):
-    product_id = models.AutoField(db_column='product_ID', primary_key=True)  # Field name made lowercase.   ######################################## changed from uniwque to primary_key
+    product_id = models.AutoField(db_column='product_ID', primary_key=True)  # Field name made lowercase.   ###### changed from unique to primary_key
     product_stock = models.PositiveIntegerField(db_column='product_Stock', blank=True, null=True)  # Field name made lowercase.
     product_name = models.TextField(db_column='product_Name', blank=True, null=True)  # Field name made lowercase.
     product_description = models.TextField(db_column='product_Description', blank=True, null=True)  # Field name made lowercase.

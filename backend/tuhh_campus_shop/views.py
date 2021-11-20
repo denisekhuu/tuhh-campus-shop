@@ -24,6 +24,5 @@ def catalog_addproduct(request):                # Arne Julius
 @api_view(['GET'])                      # Arne Julius
 def catalog_display(request):   
     products= Product.product_manager.all()         # Alle Produkte sollen ausgegeben werden
-    #print(products[1])
-    serializer = Product_serializer(products, many=True)   ######################################### kein Task Serializer??
+    serializer = Product_serializer(products, many=True)  
     return Response(serializer.data)
