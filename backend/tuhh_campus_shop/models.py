@@ -18,8 +18,22 @@ class ProductQuerySet(models.QuerySet):
 
 ##### Lea
    
-   
-   
+    def Get_Product_name(self, productID):
+        return self.filter(product_id=productID).first().product_name
+    '''
+    def Add_Product(self, productStock, productName, productDescription, productPrice ):
+        self.create(product_stock=productStock, product_name=productName , product_description=productDescription, product_price = productPrice)
+    '''
+    def Add_Product(self, productStock, productName, productDescription, productSpecs, picturePath, productPrice):
+        self.create(product_stock=productStock, product_name=productName , product_description=productDescription, product_specifications=productSpecs, picture_path= picturePath, product_price = productPrice)
+        return self.filter(product_stock=productStock, product_name=productName , product_description=productDescription, product_specifications=productSpecs, picture_path= picturePath, product_price = productPrice).first().product_id
+    def Delete_Product(self, productID):
+        try:
+            self.get(product_id=productID).delete()
+            return True
+        except:
+            return False 
+
 #####
 
 # don't forget    
@@ -36,7 +50,7 @@ from django.db import models
 
 
 class Product(models.Model):
-    product_id = models.AutoField(db_column='product_ID', unique=True)  # Field name made lowercase.
+    product_id = models.AutoField(db_column='product_ID', unique=True)  # Field name made lowercase.                            #auto-generated = True? LEA
     product_stock = models.PositiveIntegerField(db_column='product_Stock', blank=True, null=True)  # Field name made lowercase.
     product_name = models.TextField(db_column='product_Name', blank=True, null=True)  # Field name made lowercase.
     product_description = models.TextField(db_column='product_Description', blank=True, null=True)  # Field name made lowercase.
