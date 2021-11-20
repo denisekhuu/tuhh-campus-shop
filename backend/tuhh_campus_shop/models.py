@@ -24,9 +24,15 @@ class ProductQuerySet(models.QuerySet):
     def Add_Product(self, productStock, productName, productDescription, productPrice ):
         self.create(product_stock=productStock, product_name=productName , product_description=productDescription, product_price = productPrice)
     '''
+   
+#####
+
+# don't forget 
+class ProductManager(models.Manager):
     def Add_Product(self, productStock, productName, productDescription, productSpecs, picturePath, productPrice):
         self.create(product_stock=productStock, product_name=productName , product_description=productDescription, product_specifications=productSpecs, picture_path= picturePath, product_price = productPrice)
         return self.filter(product_stock=productStock, product_name=productName , product_description=productDescription, product_specifications=productSpecs, picture_path= picturePath, product_price = productPrice).first().product_id
+
     def Delete_Product(self, productID):
         try:
             self.get(product_id=productID).delete()
@@ -34,9 +40,6 @@ class ProductQuerySet(models.QuerySet):
         except:
             return False 
 
-#####
-
-# don't forget    
 
 
 # This is an auto-generated Django model module.
@@ -60,7 +63,7 @@ class Product(models.Model):
     product_reviews = models.PositiveIntegerField(db_column='product_Reviews', blank=True, null=True)  # Field name made lowercase.
 
     
-    product_manager = models.Manager()
+    product_manager = ProductManager()
     productQueryManager = ProductQuerySet.as_manager()
 	
     class Meta:
