@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from rest_framework.parsers import JSONParser
-from .serializers import Catalog_request, Product_serializer
+from .serializers import Product_serializer
 from rest_framework.response import Response
 from .models import Product
 
@@ -24,5 +24,5 @@ def catalog_addproduct(request):                # Arne Julius
 @api_view(['GET'])                      # Arne Julius
 def catalog_display(request):   
     products= Product.product_manager.all()         # Alle Produkte sollen ausgegeben werden
-    serializer = Product_serializer(data=products, many=True)
+    serializer = Product_serializer(products, many=True)  
     return Response(serializer.data)
