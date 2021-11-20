@@ -7,7 +7,7 @@ class Catalog_request(serializers.Serializer):              ##### Arne Julius
         model = ProductQuerySet
         fields = '__all__'
 """ 
-class Product_serializer(serializers.Serializer):
+class Product_serializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'                                  ##### Arne Julius
