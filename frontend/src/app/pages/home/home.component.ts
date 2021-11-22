@@ -10,37 +10,37 @@ export class HomeComponent implements OnInit {
 
 
   products : Product[] = [
-    {productId: 1, 
-    productName: "Faber-Castell Jumbo Grip Silber",
-    productStock: 3, 
-    productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
-    productImage: "../assets/images/pencil.png",
-    price: 2.99,
-    reviewID: []},
-    
-    {productId: 2, 
-    productName: "Faber-Castell Jumbo Grip Gold",
-    productStock: 3, 
-    productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
-    productImage: "../assets/images/pencil.png",
-    price: 2.99,
-    reviewID: []},
+    {product_id: 1,
+    product_name: "Faber-Castell Jumbo Grip Silber",
+    product_stock: 3,
+    product_description: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing",
+    picture_path: "../assets/images/pencil.png",
+    product_price: 2.99,
+    product_reviews: []},
 
-    {productId: 3, 
-    productName: "Faber-Castell Jumbo Grip Blue",
-    productStock: 3, 
-    productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
-    productImage: "../assets/images/pencil.png",
-    price: 2.99,
-    reviewID: []},
+    {product_id: 2,
+    product_name: "Faber-Castell Jumbo Grip Gold",
+    product_stock: 3,
+    product_description: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing",
+    picture_path: "../assets/images/pencil.png",
+    product_price: 2.99,
+    product_reviews: []},
 
-    {productId: 4, 
-      productName: "Faber-Castell Jumbo Grip Blue",
-      productStock: 3, 
-      productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
-      productImage: "../assets/images/pencil.png",
-      price: 2.99,
-      reviewID: []}
+    {product_id: 3,
+    product_name: "Faber-Castell Jumbo Grip Blue",
+    product_stock: 3,
+    product_description: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing",
+    picture_path: "../assets/images/pencil.png",
+    product_price: 2.99,
+    product_reviews: []},
+
+    {product_id: 4,
+      product_name: "Faber-Castell Jumbo Grip Blue",
+      product_stock: 3,
+      product_description: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing",
+      picture_path: "../assets/images/pencil.png",
+      product_price: 2.99,
+      product_reviews: []}
 ]
 
   constructor() { }
