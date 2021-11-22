@@ -2,7 +2,14 @@ version: "3"
 
 services:   
   db:
+    container_name: db
     image: mariadb  
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: product_database
+      MYSQL_PASSWORD: 0385836374034667
+      MYSQL_USER: product_user
 
   dj:
     container_name: dj
@@ -11,7 +18,7 @@ services:
     volumes:
       - ./backend:/code
     ports:
-      - "80:80"
+      - "8000:80"
     depends_on:
       - db
   
