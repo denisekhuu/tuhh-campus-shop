@@ -1,0 +1,29 @@
+version: "3"
+
+services:   
+  db:
+    container_name: db
+    image: mariadb  
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: product_database
+      MYSQL_PASSWORD: 0385836374034667
+      MYSQL_USER: product_user
+
+  dj:
+    container_name: dj
+    build: backend
+    command: python manage.py runserver 0.0.0.0:80
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+  
+  ng:
+    container_name: ng
+    build: frontend
+    ports:
+      - "4200:80"
