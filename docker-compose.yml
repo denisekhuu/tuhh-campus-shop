@@ -9,9 +9,9 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: product_database
+      MYSQL_DATABASE: <database>
       MYSQL_PASSWORD: <password>
-      MYSQL_USER: product_user
+      MYSQL_USER: <database>
       MARIADB_ROOT_PASSWORD: <password> 
 
   dj:
