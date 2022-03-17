@@ -1,0 +1,39 @@
+
+<form #f='ngForm'
+      (ngSubmit)="onSubmit(f)">
+  <div class="container">
+    <div class="form-group">
+      <label for="loginEmail"><b>Email</b></label>
+      <input type="text"
+             placeholder="Enter Email"
+             name="email"
+             ngModel
+             required
+             #email="ngModel"
+             id="loginEmail"
+      >
+    </div>
+    <div class="form-group">
+      <div></div>
+      <label for="loginPassword"><b>Password</b></label>
+      <input type="password"
+             placeholder="Enter Password"
+             name="password"
+             ngModel
+             required
+             #password="ngModel"
+             id="loginPassword"
+      >
+    </div>
+    <div class="form-group">
+      <button type="submit">Login</button>
+    </div>
+  </div>
+
+  <!--<div class="container" style="background-color:#f1f1f1">
+    <span class="password"> <a href="#">Forgot password?</a></span>
+  </div> -->
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="register"> <a href="#" routerLink="/register">Not registered yet?</a> </span>
+  </div>
+</form>

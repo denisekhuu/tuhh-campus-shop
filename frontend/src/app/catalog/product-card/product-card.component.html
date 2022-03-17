@@ -1,4 +1,6 @@
-<div class="product-card">
+<!--Denise-->
+<a routerLink="/catalog/{{product.product_id}}">
+<div class="product-card box">
 <img alt="" class = "product-img" src="{{product.picture_path}}" />
 <ul class = "product-details">
     <li class="list-element product-titel">{{product.product_name}}</li>
@@ -6,3 +8,4 @@
     <li class="list-element product-price">{{product["product_price"]}}€</li>
 </ul>
 </div>
+</a>

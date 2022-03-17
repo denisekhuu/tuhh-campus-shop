@@ -1,0 +1,21 @@
+<!-- Pascal -->
+
+<div>
+  <form #f='ngForm' (ngSubmit)="onSubmit(f)">
+    <label for="user_name">Your Name:</label><br>
+    <input type="text" id="user_name" name="user_name" [(ngModel)]="user_data.user_name" value="{{ user_data.user_name }}"><br>
+    <label for="user_email">Your Email:</label><br>
+    <input type="text" id="user_email" name="user_email" [(ngModel)]="user_data.user_email" value="{{ user_data.user_email }}"><br>
+    <label for="user_address">Your Address:</label><br>
+    <input type="text" id="user_address" name="user_address" [(ngModel)]="user_data.user_address" value="{{ user_data.user_address }}"><br>
+    <label for="user_phone_number">Your Phone Number:</label><br>
+    <input type="text" id="user_phone_number" name="user_phone_number" [(ngModel)]="user_data.user_phone_number" value="{{ user_data.user_phone_number }}"><br>
+    <label for="user_bank_info">Your Bank Info:</label><br>
+    <input type="text" id="user_bank_info" name="user_bank_info" [(ngModel)]="user_data.user_bank_info" value="{{ user_data.user_bank_info }}"><br><br>
+    <input type="submit" value="Save">
+    {{ update_message }}
+  </form>
+  <form #f='ngForm' (ngSubmit)="onLogout(f)">
+    <button type="submit" value="Logout">Logout</button>
+  </form>
+</div>

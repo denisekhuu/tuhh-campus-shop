@@ -1,0 +1,21 @@
+<div class="container" >
+    <h1 class = "title" >My Shopping Cart</h1>
+
+    <div class="" *ngFor="let product of products">
+        <img alt="" class = "product-img" src="{{product.picture_path}}" />
+            <p class="list-element product-titel"><span class="left-title">{{product.product_name}}</span> <span class="right">{{product["product_price"]}}€</span></p>
+            <p class="list-element product-description">{{product["product_description"]}}</p>
+            <button (click)="deleteProduct(product.product_id)" class= "btn btn-danger entf">Entfernen</button>
+        <hr>
+
+    </div>
+
+
+    <p class="overall-price"><span class ="left">GESAMT</span> <span class="right">{{price | number:'1.2-2' }}€</span></p>
+
+    <!---<div class="btn-btm">
+      <button (click)="checkout()" class="btn btn-primary">Checkout</button>
+    </div> --->
+
+    <app-checkout-btn></app-checkout-btn>
+</div>

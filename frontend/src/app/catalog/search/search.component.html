@@ -1,0 +1,5 @@
+<form action="#" class="search-wrap" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <div class="input-group w-100 search-form"> <input type="text" class="form-control" style="width:55%;" placeholder="Search" [formControl]="search">
+      <div class="input-group-append"> <button class="btn btn-primary search-button" type="submit"> <i class="fa fa-search"></i> </button> </div>
+    </div>
+</form>

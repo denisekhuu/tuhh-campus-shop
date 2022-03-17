@@ -1,8 +1,6 @@
 .catalog{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-left: 2.5rem;
   overflow: hidden;
 }
 

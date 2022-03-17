@@ -1,0 +1,16 @@
+.search-wrap {
+    width: 25vw;
+}
+
+.search-form {
+    border: 1px solid #ffffff !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.search-button {
+    color: #007bff;
+    background-color: #ffffff;
+    border-color: #eeecec;
+    width: 2rem;
+  }

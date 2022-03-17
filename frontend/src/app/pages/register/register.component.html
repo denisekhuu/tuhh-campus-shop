@@ -1,0 +1,65 @@
+<form #r='ngForm'
+      (ngSubmit)="onSubmit(r)">
+  <div class="container">
+    <div class="form-group">
+      <label for="registerEmail"><b>Email</b></label>
+      <input type="text"
+             placeholder="Enter Email"
+             name="email"
+             ngModel
+             required
+             #email="ngModel"
+             id="registerEmail"
+      >
+    </div>
+    <div class="form-group">
+      <div></div>
+      <label for="registerPassword"><b>Password</b></label>
+      <input type="password"
+             placeholder="Enter Password"
+             name="password"
+             ngModel
+             required
+             #password="ngModel"
+             id="registerPassword"
+      >
+    </div>
+    <div class="form-group">
+      <div></div>
+      <label for="registerUsername"><b>Username</b></label>
+      <input type="text"
+             placeholder="Enter Username"
+             name="username"
+             ngModel
+             required
+             #username="ngModel"
+             id="registerUsername"
+      >
+    </div>
+    <div class="form-group">
+      <label for="registerBank_Info"><b>Bank Informations</b></label>
+      <input type="text"
+             placeholder="Enter Bank Informations"
+             name="bank_info"
+             ngModel
+             required
+             #bank_info="ngModel"
+             id="registerBank_Info"
+      >
+      <div class="form-group">
+        <label for="registerPhone_Number"><b>Phone Number</b></label>
+        <input type="text"
+               placeholder="Enter Phone Number"
+               name="phone_number"
+               ngModel
+               required
+               #phone_number="ngModel"
+               id="registerPhone_Number"
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit">Register</button>
+    </div>
+  </div>
+</form>

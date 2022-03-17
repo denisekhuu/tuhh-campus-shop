@@ -1,0 +1,16 @@
+<div class="container" >
+  <h1 class = "title" >My Wishlist</h1>
+
+  <div class="" *ngFor="let product of wishlistproducts">
+    <img alt="" class = "product-img" src="{{product.picture_path}}" />
+    <p class="list-element product-titel"><span class="left-title">{{product.product_name}}</span> <span class="right">{{product["product_price"]}}€</span></p>
+    <p class="list-element product-description">{{product["product_description"]}}</p>
+    <button (click)="deleteProduct(product.product_id)" class= "btn btn-danger entf">Entfernen</button>
+    <button (click)="addProduct(product.product_id)" class="btn btn-primary">Add To Shopping Cart</button>
+    <hr>
+  </div>
+
+
+
+  </div>
+

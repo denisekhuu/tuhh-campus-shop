@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\login",
+    "\\backend\\shopping_cart",
+    "\\backend\\tuhh_campus_shop",
+    "\\backend\\user_management"
+  ],
+  "SelectedNode": "\\backend\\user_management\\views.py",
+  "PreviewInSolutionExplorer": false
+}

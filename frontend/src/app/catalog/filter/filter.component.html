@@ -1,0 +1,20 @@
+<!--Denise-->
+<div class="product-filter">
+    <form [formGroup]="filterForm" (ngSubmit)="onFilter()">
+        <div class = "filter-category">
+            <p class = "title">Preis</p>
+            <div class= "fiter-item" *ngFor="let pricefilter of priceFilterList">
+                <app-filter-item [formGroup]="filterForm" [filteritem]="pricefilter"></app-filter-item>
+            </div>
+        </div>
+        <hr>
+        <div class = "filter-category">
+            <p class = "title">Kategorie</p>
+            <div class= "fiter-item" *ngFor="let categoryfilter of categoryFilterList">
+                    <app-filter-item [formGroup]="filterForm" [filteritem]="categoryfilter"></app-filter-item>
+            </div>
+        </div>
+        <hr>
+        <button class="submit" type="submit">ARTIKEL ANSEHEN</button>
+    </form>
+</div>

@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+#import django
+#django.setup()
 from pathlib import Path
+import os.path
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders'
+    'corsheaders', 
+    'product_management.apps.ProductManagementConfig', 
+    'user_management.apps.UserManagementConfig', 
+    'payment.apps.PaymentConfig',
+    'login.apps.LoginConfig',
+    'shopping_cart.apps.ShoppingCartConfig',
+    'django_filters',
+    'wishlist.apps.WishlistConfig',
+    #'django_mysql',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +68,8 @@ ROOT_URLCONF = 'tuhh_campus_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_PATH, 'tuhh_campus_shop/templates/'), 
+        os.path.join(BASE_DIR, 'payment', 'tuhh_campus_shop/templates/', 'payment')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +88,8 @@ WSGI_APPLICATION = 'tuhh_campus_shop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+DATABASE_ROUTERS = ['database_routers.product.ProductRouter', 'database_routers.users.UserRouter']
+
 ##### Andrei
 DATABASES = {
     'default': {
@@ -85,7 +99,18 @@ DATABASES = {
         'PASSWORD': '0385836374034667',
         'HOST': '85.214.58.239',
         'PORT': '3306',
-    }
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+    
+    } , 
+    'user': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'user_database',
+        'USER': 'userdata_user',
+        'PASSWORD': '6772971379701564',
+        'HOST': '85.214.58.239',
+        'PORT': '3306',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
+    } , 
 }
 ##### 
 

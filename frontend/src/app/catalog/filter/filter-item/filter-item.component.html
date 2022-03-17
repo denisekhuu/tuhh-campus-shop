@@ -1,0 +1,8 @@
+<!--Denise-->
+<div [formGroup]="filterForm">
+    <label for="{{filteritem['id']}}" >
+        <input type="checkbox" id="{{filteritem['id']}}" name="{{filteritem['id']}}"  formControlName="{{filteritem['id']}}"/>
+        <span class="checkmark"></span>
+        {{filteritem['name']}}
+    </label>
+</div>

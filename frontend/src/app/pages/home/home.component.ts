@@ -6,6 +6,8 @@ import { Product } from '../../models/product';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+// -- Denise -- //
 export class HomeComponent implements OnInit {
 
 

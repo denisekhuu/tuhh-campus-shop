@@ -1,3 +1,5 @@
+
+
 """tuhh_campus_shop URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,9 +17,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import *
+from django.urls import include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalog/', catalog_display) 
+    path('', include('product_management.urls')),
+    path('catalog/filter/', include('filter.urls')),
+    path('', include('user_management.urls')),
+    path('payment/', include('payment.urls')),
+    path('login/', include('login.urls')),
+    path('register/', include('register.urls')),
+    path('wishlist/', include('wishlist.urls')),
+    path('', include('shopping_cart.urls')),
+    #path('register/', registerPage),
+
+    
 ]

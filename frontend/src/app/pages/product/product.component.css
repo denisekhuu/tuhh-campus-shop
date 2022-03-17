@@ -1,0 +1,51 @@
+.product-card{
+    display: block;
+    align-items: center;
+    padding: 1rem;
+    max-width: 80vw; 
+    min-width: 75vw;
+    min-height: fit-content;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 4px 0px rgb(48 48 48 / 30%), 0px 1px 3px 1px rgb(48 48 48 / 15%);
+    margin: 1rem;
+}
+
+.product-titel{
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: rgb(71, 171, 164);
+}
+
+.product-description{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.product-price{
+    font-size: 1.3rem;
+    
+    text-align: end;
+    color: rgb(71, 171, 164);
+}
+
+.product-img{
+    width: 19vw;
+    margin-bottom: 0.5rem;
+}
+
+.list-element{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.shopping-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end ;
+}
+
+.cart{
+    justify-content: flex-end ;
+}

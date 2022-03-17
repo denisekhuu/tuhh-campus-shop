@@ -1,4 +1,6 @@
-<div class="catalog">
+<div class="catalog" >
+  <app-search (searchEvent)="searchProducts($event)" ></app-search>
+  <app-filter (filterEvent)="filterProducts($event)" ></app-filter>
   <div class="product" *ngFor="let product of products" [ngClass]="product">
     <app-product-card [product]="product"></app-product-card>
   </div>
